@@ -14,10 +14,19 @@
 
 | 서비스 | 용도 |
 | --- | --- |
-| [Google Cloud Console](https://console.cloud.google.com/) | Google OAuth, API, OAuth Client 관리 |
+| [Google Cloud Console](https://console.cloud.google.com/) | Google OAuth, API, OAuth Client 관리, YouTube Data API v3 프로젝트 및 API Key 관리 |
 | [Kakao Developers](https://developers.kakao.com/) | 카카오 로그인, REST API Key, Redirect URI, 동의항목 관리 |
 | [Firebase Console](https://console.firebase.google.com/) | Firebase Authentication, Google 로그인, 이메일 로그인, Provider 설정 |
 | [Supabase](https://supabase.com/dashboard) | PostgreSQL, SQL Editor, Auth, REST API, Storage |
+
+## Social / Content / Music API
+
+| 서비스 | 용도 |
+| --- | --- |
+| [Meta for Developers](https://developers.facebook.com/apps/) | Meta/Instagram 앱 생성, App ID/Secret, Facebook Login, Instagram Graph API 설정, Graph API Explorer에서 Access Token 발급 및 API 호출 테스트 |
+| [TikTok for Developers](https://developers.tiktok.com/) | Developer App, Client Key/Secret, Login Kit/OAuth, Display API로 프로필·영상 정보 조회, Research API로 공개 계정·영상 데이터 조회, Sandbox 및 앱 심사 관리 |
+| [X Developer Portal](https://developer.x.com/en/portal/dashboard) | X API 앱 관리, API Key/Secret, Bearer Token, OAuth Client ID/Secret 발급 및 공개 계정·게시물 API 연동 |
+| [Last.fm API](https://www.last.fm/api/) | API Key/Shared Secret 발급, 아티스트·앨범·트랙 검색 및 정보 조회, 인기 트랙/앨범, 유사 아티스트, 태그, 차트 데이터 조회 |
 
 ## Payment
 
