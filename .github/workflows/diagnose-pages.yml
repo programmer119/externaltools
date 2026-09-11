@@ -17,6 +17,8 @@ jobs:
           getent hosts programmer119.github.io || true
           echo '=== DNS custom ==='
           getent hosts worklinks.suaveforge.com || true
+          echo '=== DNS spaceship.dev ==='
+          getent ahostsv4 spaceship.dev || true
           echo '=== HEAD root ==='
           curl -sSIL --max-time 20 https://programmer119.github.io/worklinks/ || true
           echo '=== GET root status/body ==='
