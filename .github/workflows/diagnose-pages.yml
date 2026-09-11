@@ -1,0 +1,33 @@
+name: Diagnose Pages
+on:
+  push:
+    paths:
+      - '.github/workflows/diagnose-pages.yml'
+  workflow_dispatch:
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: DNS and HTTP checks
+        shell: bash
+        run: |
+          set -x
+          echo '=== DNS github.io ==='
+          getent hosts programmer119.github.io || true
+          echo '=== DNS custom ==='
+          getent hosts worklinks.suaveforge.com || true
+          echo '=== HEAD root ==='
+          curl -sSIL --max-time 20 https://programmer119.github.io/worklinks/ || true
+          echo '=== GET root status/body ==='
+          curl -sS -D /tmp/root.h -o /tmp/root.b --max-time 20 https://programmer119.github.io/worklinks/ || true
+          cat /tmp/root.h || true
+          head -c 500 /tmp/root.b || true
+          echo
+          echo '=== GET startup-support ==='
+          curl -sS -D /tmp/sub.h -o /tmp/sub.b --max-time 20 https://programmer119.github.io/worklinks/startup-support/ || true
+          cat /tmp/sub.h || true
+          head -c 500 /tmp/sub.b || true
+          echo
+          echo '=== CUSTOM DOMAIN ==='
+          curl -sSIL --max-time 20 https://worklinks.suaveforge.com/ || true
